@@ -21,3 +21,12 @@ def get_website(need_website=None):
         if website_list:
             website = website_list[0]
     return website_list
+cName = ''
+while cName != 'q':
+    try: 
+        cName=str(raw_input('Company Name (Enter \'q\' to quit): '))
+    except ValueError:
+        print ("Invalid Input")
+
+    for company in get_website(cName):
+        print (company)
